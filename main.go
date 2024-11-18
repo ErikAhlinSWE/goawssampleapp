@@ -1,3 +1,8 @@
+//1. DOCKERFILE
+//2. buildspec som bygger DOCKERFILE
+//2,5 docker login git.systementor.se yacloud yacloud1
+//3. 	PUSH IMAGE -> git.systementor.se
+
 package main
 
 import (

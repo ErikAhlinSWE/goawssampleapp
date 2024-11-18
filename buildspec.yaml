@@ -17,13 +17,9 @@ version: 0.2
 
         
 phases:
-  install:
-    commands:
-      - go get
   build:
     commands:
-      - go build
-artifacts:
-  files:
-    - 'awssampleapp'
-  name: awssampleapp_${GOOS}_${GOARCH}_$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - docker build -t git.systementor.se/yacloud/ahlin.erik .
+      - docker login -u yacloud -p yacloud1 https://git.systementor.se
+      - docker push git.systementor.se/yacloud/ahlin.erik
+  
