@@ -19,7 +19,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - docker build -t git.systementor.se/ahlin.erik .
+      - docker build -t git.systementor.se/ahlin.erik/Erik_Build_image_go .
       - docker login -u ahlin.erik -p yacloud1 https://git.systementor.se
-      - docker push git.systementor.se/ahlin.erik
+      - docker push git.systementor.se/ahlin.erik/Erik_Build_image_go
   
